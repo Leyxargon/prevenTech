@@ -16,7 +16,7 @@ app.config["MAIL_PASSWORD"] = 'Progetto1'
 
 mail.init_app(app)
 app.config['MONGO_DBNAME'] = 'maps'
-app.config['GOOGLEMAPS_KEY'] = "AIzaSyB2tVZQaAh_EgYl3mvINIX2p77FHSXel-c"
+app.config['GOOGLEMAPS_KEY'] = "AIzaSyATsh_m-zWhRALK2up0dSe4Bkk8suOMn-k"
 client = MongoClient("mongodb+srv://user:user@preventechdb-swyud.mongodb.net/test?retryWrites=true&w=majority")
 db = client.maps
 
