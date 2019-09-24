@@ -5,9 +5,8 @@
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS mappe -->
-    <style type="text/css">
-        #mappa { height: calc(100% - 62px); }
-    </style>
+    <link rel="stylesheet" href="/static/leaflet/leaflet.css" />
+    <script src="/static/leaflet/leaflet.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/static/css/bootstrap.css"/>
@@ -36,8 +35,8 @@
 </head>
 <body>
     {% if fullmap %}
-        <div id="mappa">
-            {% block maps %}{% endblock %}
+        <div id="map">
+            {% block map %}{% endblock %}
         </div>
     {% else %}
     <div class="container">
