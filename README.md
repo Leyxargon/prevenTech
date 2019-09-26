@@ -1,7 +1,7 @@
 # prevenTech
 <img src="./static/img/logo_nero.png">
 PrevenTech è un sito web che consente di ricercare gli erogatori di profilattici più vicini alla propria zona.
-Il progetto è stato sviluppato per l'esame di Tecnologie Web della _Università degli Studi di Napoli "Parthenope"_.
+Il progetto è stato sviluppato per l'esame di Tecnologie Web della *Università degli Studi di Napoli "Parthenope"*.
 
 ## Componenti utilizzati
 - Python3
@@ -34,7 +34,7 @@ app.config["MAIL_PASSWORD"] = 'MIA_PASSWORD'
 ```
 
 ## Esegui
-Dopo aver completato le configurazioni _preliminari_ avviare l'applicazione web basta aprire il file `app.py`, che renderà il sito accessibile sulla porta 5000.
+Dopo aver completato le configurazioni *preliminari* avviare l'applicazione web basta aprire il file `app.py`, che renderà il sito accessibile sulla porta 5000.
 
 Salva la quaglia, proteggiti.
 Buon divertimento con la nostra app!
