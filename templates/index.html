@@ -18,11 +18,27 @@
     // {x} and {y} are the x/y of where you are on the map
     // {z} is the zoom level
     // {s} is the subdomain of cartodb
-    var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">MongoDB</a>'
-    });
+    var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png');
 
     // Now add the layer onto the map
     map.addLayer(layer);
+
+    // Geolocalizza l'utente
+    map.locate({setView: true, maxZoom: 16});
+    function onLocationFound(e) {
+	    var radius = e.accuracy;
+
+	    L.marker(e.latlng).addTo(map).bindPopup("Sei a circa " + radius + " metri da qui");
+
+	    L.circle(e.latlng, radius).addTo(map);
+    }
+    map.on('locationfound', onLocationFound);
+    // Messaggio di errore geolocalizzazione
+    function onLocationError(e) {
+	    alert(e.message);
+    }
+    map.on('locationerror', onLocationError);
+
+
     </script></div>
 {% endblock %}

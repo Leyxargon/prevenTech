@@ -1,8 +1,8 @@
 from flask_wtf import Form
 from wtforms import StringField, TextAreaField, SubmitField, TextField, validators, ValidationError
 class ContactForm(Form):
-  name = TextField("Nome",  [validators.Required("Please enter your name.")])
-  email = TextField("Email",  [validators.Required("Please enter your email address."), validators.Email("Please enter your email address.")])
-  subject = TextField("Indirizzo erogatore",  [validators.Required("Please enter a subject.")])
-  message = TextAreaField("Indirizzo + Coordinate",  [validators.Required("Please enter a message.")])
+#Di seguito viene indicato come è costruito il form che poi verra richiamato nel nostro HTML.
+  name = TextField("Nome",  [validators.Required("Inserire il nome.")])
+  email = TextField("Email",  [validators.Required("Inserire email."), validators.Email("Inserire email.")])
+  message = TextAreaField("Nome + Indirizzo + Coordinate",  [validators.Required("Inserire indirizzo erogatore incluse coordinate.")])
   submit = SubmitField("Invia")

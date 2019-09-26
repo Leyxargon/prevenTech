@@ -4,7 +4,6 @@ from forms import ContactForm
 from flask_mail import Message, Mail
 
 mail = Mail()
-
 app = Flask(__name__, template_folder="templates")
 app.secret_key = '1a2b3c4d'
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
@@ -21,7 +20,7 @@ db = client.maps
 
 
 @app.route('/')
-def fullmap():
+def index():
     # carica i segnaposti
     markers = list()
     for i in db.coord.find({}, {"_id": 0}):
@@ -29,7 +28,7 @@ def fullmap():
 
     return render_template(
         'index.html',
-        fullmap=fullmap,
+        fullmap=index,
         markers=markers
     )
 
@@ -45,13 +44,14 @@ def contact():
 
     if request.method == 'POST':
         if not form.validate():
-            flash('All fields are required.')
+            flash('Tutti i campi sono obbligatori.')
             return render_template('contact.html', form=form)
         else:
-            msg = Message(form.subject.data, sender=form.email.data, recipients=['assistenza.preventech@gmail.com'])
+            msg = Message(subject="Segnalazione nuovo erogatore", sender=form.email.data, recipients=['assistenza.preventech@gmail.com'])
             msg.body = """
-      From: %s &lt;%s&gt;
-      %s
+      Inviato da: %s ;
+	  Email: %s;
+      Nome-Indirizzo-Coordinate: %s
       """ % (form.name.data, form.email.data, form.message.data)
             mail.send(msg)
 
