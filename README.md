@@ -34,7 +34,7 @@ app.config["MAIL_PASSWORD"] = 'MIA_PASSWORD'
 ```
 
 ## Esegui
-Dopo aver completato le configurazioni <i>preliminari</i> avviare l'applicazione web basta aprire il file `app.py`, che renderà il sito accessibile sulla porta 5000.
+Dopo aver completato le configurazioni <i>preliminari</i> per avviare l'applicazione web basta aprire il file `app.py`, che renderà il sito accessibile sulla porta 5000.
 
 Salva la quaglia, proteggiti.
 Buon divertimento con la nostra app!
