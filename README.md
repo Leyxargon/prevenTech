@@ -1,7 +1,7 @@
 # prevenTech
 <img src="./static/img/logo_nero.png">
 PrevenTech è un sito web che consente di ricercare gli erogatori di profilattici più vicini alla propria zona.
-Il progetto è stato sviluppato per l'esame di Tecnologie Web della <i>Università degli Studi di Napoli "Parthenope"</i>.
+Il progetto è stato sviluppato per l'esame di Tecnologie Web dell'<i>Università degli Studi di Napoli "Parthenope"</i>.
 
 ## Componenti utilizzati
 - Python3
